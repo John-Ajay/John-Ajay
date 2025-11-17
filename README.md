@@ -8,3 +8,4 @@ This project contains code, files, and resources for my personal projects. It is
 ## Installation
 1. Clone the repository:
    ```bash
+   git clone https://github.com/John-Ajay/John-Ajay.git
