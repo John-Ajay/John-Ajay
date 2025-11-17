@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!--Navabar-->
+   <nav class="navabar">
+    <div class="logocontainer">
+        <img src="cadena.jpg" class="logoimg">
+        <span class="logotext">Cadena Bitcoin</span>
+    </div>
+    <br>
+    <div class="navlinks">
+    <a href="https://cadenabitcoin.com/">Home</a>
+    <a href="https://cadenabitcoin.com/whitepaper.pdf">Our Products</a>
+    <a href="https://cadenabitcoin.com/faq">About Us</a>
+    <a href="https://cadenabitcoin.com/contact">Contact Us</a>
+    </div>
+    </nav>
+    
+    <!--Bitcoin Price Ticker-->
+    <div class="ticker">
+        <span>BTCUSD:</span>
+        <span id="btcprice">Loading...</span>
+    </div>
+
+    <!--Hero-->
+    <section class="hero">
+        <h1>Welcome To The Home Of Bitcoin</h1>
+        <p class="subtext">
+            Cadena is a market for Bitcoin borrowing and lending
+            where lenders earn high yield and borrowers leverage bitcoin exposure.
+        </p>
+    </section>
+
+    <!-- Feature Section -->
+     <section class="features">
+        <div class="featurecard">
+            <h3>Borrow Bitcoin</h3>
+            <p>Access instant Bitcoin liquidity with competitive rates.</p>
+            <button>Start Borrowing</button>
+        </div>
+     </section>
+</body>
+
+<!-- Bitcoin Price Script-->
+ <script>
+    async function LoadBTC() {
+        try {
+          let data = await fetch("https://api.coindesk.com/v1/bpi/currentprice/BTC.json");
+          let json = await data.json();
+          let price = json.bpi.USD.rate;
+          document.getElementById("btcprice").innerHTML = "$" + price;
+        } catch (error) {
+            document.getElementById("btcprice").innerHTML = "Error";
+        }
+    }    
+    LoadBTC();
+    setInterval(LoadBTC, 30000);
+ </script>
+
+</html>

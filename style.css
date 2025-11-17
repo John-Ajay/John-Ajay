@@ -1,0 +1,100 @@
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial,  sans-serif;
+ }
+
+ /*Navbar */
+ .navbar {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .logo {
+    color: #6a00ff;
+    font-weight: bold;
+    font-size: 1.5rem;
+ }
+
+ .navlinks a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #b4b4ff;
+    font-weight: bold;
+    font-size: 1rem;
+ }
+
+ /* Ticker */
+ .ticker {
+    text-align: center;
+    padding: 10px 0;
+    color: #ffddff;
+    background: #12001f;
+    font-size: 1.1rem;
+ }
+
+ /* Hero Section */
+ .hero {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+ }
+
+ .hero h1 {
+    font-size: 2.8rem;
+    max-width: 850px;
+ }
+
+ .subtext {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    max-width: 750px;
+    color: #d4d4d4;
+ }
+
+ /* Features */
+ .features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+ }
+
+ .featurecard {
+    padding: 25px 40px;
+    border: 1px solid #330066;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3x;
+ }
+
+ .featurecard:hover {
+    transform: translateY(-5px);
+ }
+
+ .featurecard h3 {
+    color: #c48aff;
+ }
+
+ button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #6a00ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+ }
+
+ button:hover {
+    opacity: 0.8;
+ }
